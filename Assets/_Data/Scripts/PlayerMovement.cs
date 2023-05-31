@@ -25,33 +25,35 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        
+    }
+
+	private void FixedUpdate()
+	{
+        isGrounded = groundRaycast();
+
         if (Input.GetKey(KeyCode.A))
         {
-            transform.Translate(Vector3.left * speed * Time.deltaTime);
+            rb.velocity = Vector3.left * speed;
 
             sr.flipX = true;
         }
 
         if (Input.GetKey(KeyCode.D))
         {
-            transform.Translate(Vector3.right * speed * Time.deltaTime);
+            rb.velocity = Vector3.right * speed;
 
             sr.flipX = false;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        if (Input.GetKey(KeyCode.Space) && isGrounded)
         {
-            rb.velocity = Vector3.up * jumpForce * Time.deltaTime;
+            rb.velocity = Vector3.up * jumpForce;
         }
     }
 
-	private void FixedUpdate()
-	{
-        isGrounded = groundRaycast();
-	}
-
 	private bool groundRaycast()
     {
-        return Physics2D.Raycast(transform.position, Vector2.down, 0.7f, groundMask);
+        return Physics2D.Raycast(transform.position, Vector2.down, 0.6f, groundMask);
     }
 }
