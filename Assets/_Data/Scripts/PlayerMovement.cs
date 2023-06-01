@@ -34,21 +34,21 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.A))
         {
-            rb.velocity = Vector3.left * speed;
+            rb.velocity = new Vector2(speed * -1, rb.velocity.y);
 
             sr.flipX = true;
         }
 
         if (Input.GetKey(KeyCode.D))
         {
-            rb.velocity = Vector3.right * speed;
+            rb.velocity = new Vector2(speed, rb.velocity.y);
 
             sr.flipX = false;
         }
 
         if (Input.GetKey(KeyCode.Space) && isGrounded)
         {
-            rb.velocity = Vector3.up * jumpForce;
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
     }
 
