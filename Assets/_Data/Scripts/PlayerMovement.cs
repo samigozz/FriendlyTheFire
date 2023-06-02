@@ -5,7 +5,9 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField]
-    private float speed;
+    private float speedGrounded;
+    [SerializeField]
+    private float speedJumped;
     [SerializeField]
     private float jumpForce;
 
@@ -23,25 +25,33 @@ public class PlayerMovement : MonoBehaviour
         sr = transform.GetChild(0).GetComponent<SpriteRenderer>();
     }
 
-    void Update()
-    {
-        
-    }
-
 	private void FixedUpdate()
 	{
         isGrounded = groundRaycast();
 
         if (Input.GetKey(KeyCode.A))
         {
-            rb.velocity = new Vector2(speed * -1, rb.velocity.y);
+            if (isGrounded)
+            {
+                rb.velocity = new Vector2(speedGrounded * -1, rb.velocity.y);
+            }else
+            {
+                rb.velocity = new Vector2(speedJumped * -1, rb.velocity.y);
+            }
 
             sr.flipX = true;
         }
 
         if (Input.GetKey(KeyCode.D))
         {
-            rb.velocity = new Vector2(speed, rb.velocity.y);
+            if (isGrounded)
+            {
+                rb.velocity = new Vector2(speedGrounded, rb.velocity.y);
+            }
+            else
+            {
+                rb.velocity = new Vector2(speedJumped, rb.velocity.y);
+            }
 
             sr.flipX = false;
         }
