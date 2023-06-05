@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName =("TuMadreEstaGorda"))]
+[CreateAssetMenu(menuName =("Scriptable"))]
 public class Data : ScriptableObject
 {
     [SerializeField]
@@ -12,4 +12,5 @@ public class Data : ScriptableObject
     {
         return lives;
     }
+
 }

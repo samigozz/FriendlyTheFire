@@ -1,36 +1,49 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SetLives : MonoBehaviour
 {
     [SerializeField]
     private Data myData;
-    
+
     [SerializeField]
-    private Sprite livesSprite;
+    private Transform LifeContainer;
 
-    private SpriteRenderer[] livesRenderers;
+    [SerializeField]
+    private GameObject livesSprite;
 
-    private int offset = 1;
+    private List<GameObject> livesRenderers = new();
+
+    private int playerLifes;
 
     void Start()
     {
-        livesRenderers = new SpriteRenderer[myData.getLives()];
+        livesRenderers.Capacity = myData.getLives();
 
-        for (int i = 0; i < myData.getLives(); i++)
+        playerLifes = myData.getLives();
+
+        UpdateLives();
+    }
+
+    public void UpdateLives()
+    {   
+        for (int i = 0; i < playerLifes; i++)
         {
-            GameObject lifeObject = new GameObject("Life" + i);
-            SpriteRenderer spriteRenderer = lifeObject.AddComponent<SpriteRenderer>();
+            var lifeObject = Instantiate(livesSprite);
+            livesRenderers.Add(lifeObject);
 
-            spriteRenderer.sprite = livesSprite;
-
-            lifeObject.transform.position = new Vector3(i + offset, -0, 0);
-
-            livesRenderers[i] = spriteRenderer;
-
-            offset += offset;
+            if(LifeContainer)
+                lifeObject.transform.SetParent(LifeContainer);
         }
     }
- 
+
+    public void SubstractLifes(int damage)
+    {
+        livesRenderers[playerLifes - 1].gameObject.SetActive(false);
+
+        playerLifes -= damage;
+
+    }
 }
