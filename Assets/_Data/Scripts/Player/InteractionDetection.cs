@@ -8,7 +8,7 @@ public class InteractionDetection : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonDown("Interact") && interactablesInRange.Count > 0)
+        if (Input.GetKeyDown(KeyCode.E) && interactablesInRange.Count > 0)
         {
             var interactable = interactablesInRange[0];
             interactable.Interact();
@@ -25,6 +25,7 @@ public class InteractionDetection : MonoBehaviour
 
         if (interactable != null && interactable.CanInteract())
         {
+            Debug.Log("Interactable found.");
             interactablesInRange.Add(interactable);
         }
     }

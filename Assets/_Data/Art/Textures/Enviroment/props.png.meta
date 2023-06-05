@@ -128,15 +128,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: props_0
+      name: tree_cut
       rect:
         serializedVersion: 2
-        x: 14
-        y: 128
-        width: 22
-        height: 33
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 53
+        y: 176
+        width: 36
+        height: 15
+      alignment: 9
+      pivot: {x: 0.47222224, y: -0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -149,7 +149,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: props_1
+      name: tree_full
       rect:
         serializedVersion: 2
         x: 121
@@ -178,7 +178,7 @@ TextureImporter:
         width: 87
         height: 108
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -194,12 +194,12 @@ TextureImporter:
       name: props_3
       rect:
         serializedVersion: 2
-        x: 16
-        y: 96
-        width: 26
-        height: 15
+        x: 14
+        y: 128
+        width: 22
+        height: 33
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -215,12 +215,12 @@ TextureImporter:
       name: props_4
       rect:
         serializedVersion: 2
-        x: 96
+        x: 16
         y: 96
-        width: 16
-        height: 10
+        width: 26
+        height: 15
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -236,12 +236,12 @@ TextureImporter:
       name: props_5
       rect:
         serializedVersion: 2
-        x: 241
+        x: 96
         y: 96
-        width: 46
-        height: 28
+        width: 16
+        height: 10
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -257,12 +257,12 @@ TextureImporter:
       name: props_6
       rect:
         serializedVersion: 2
-        x: 144
-        y: 55
-        width: 9
-        height: 9
+        x: 241
+        y: 96
+        width: 46
+        height: 28
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -278,12 +278,12 @@ TextureImporter:
       name: props_7
       rect:
         serializedVersion: 2
-        x: 154
+        x: 144
         y: 55
-        width: 5
+        width: 9
         height: 9
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -299,12 +299,12 @@ TextureImporter:
       name: props_8
       rect:
         serializedVersion: 2
-        x: 208
-        y: 48
-        width: 32
-        height: 32
+        x: 154
+        y: 55
+        width: 5
+        height: 9
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -320,12 +320,12 @@ TextureImporter:
       name: props_9
       rect:
         serializedVersion: 2
-        x: 256
+        x: 208
         y: 48
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -341,12 +341,12 @@ TextureImporter:
       name: props_10
       rect:
         serializedVersion: 2
-        x: 304
+        x: 256
         y: 48
-        width: 16
-        height: 16
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -362,12 +362,12 @@ TextureImporter:
       name: props_11
       rect:
         serializedVersion: 2
-        x: 336
+        x: 304
         y: 48
         width: 16
-        height: 15
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -383,12 +383,12 @@ TextureImporter:
       name: props_12
       rect:
         serializedVersion: 2
-        x: 373
+        x: 336
         y: 48
-        width: 18
-        height: 20
+        width: 16
+        height: 15
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -404,12 +404,12 @@ TextureImporter:
       name: props_13
       rect:
         serializedVersion: 2
-        x: 16
-        y: 16
-        width: 32
-        height: 32
+        x: 373
+        y: 48
+        width: 18
+        height: 20
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -425,12 +425,12 @@ TextureImporter:
       name: props_14
       rect:
         serializedVersion: 2
-        x: 256
-        y: 17
+        x: 16
+        y: 16
         width: 32
-        height: 16
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -446,12 +446,12 @@ TextureImporter:
       name: props_15
       rect:
         serializedVersion: 2
-        x: 334
-        y: 32
-        width: 18
-        height: 10
+        x: 256
+        y: 17
+        width: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -467,12 +467,12 @@ TextureImporter:
       name: props_16
       rect:
         serializedVersion: 2
-        x: 80
-        y: 16
-        width: 16
-        height: 16
+        x: 334
+        y: 32
+        width: 18
+        height: 10
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -488,12 +488,12 @@ TextureImporter:
       name: props_17
       rect:
         serializedVersion: 2
-        x: 113
+        x: 80
         y: 16
-        width: 15
-        height: 11
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -509,12 +509,12 @@ TextureImporter:
       name: props_18
       rect:
         serializedVersion: 2
-        x: 144
+        x: 113
         y: 16
-        width: 9
-        height: 9
+        width: 15
+        height: 11
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -530,12 +530,12 @@ TextureImporter:
       name: props_19
       rect:
         serializedVersion: 2
-        x: 154
+        x: 144
         y: 16
-        width: 5
+        width: 9
         height: 9
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -551,12 +551,12 @@ TextureImporter:
       name: props_20
       rect:
         serializedVersion: 2
-        x: 176
+        x: 154
         y: 16
-        width: 16
+        width: 5
         height: 9
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -572,12 +572,12 @@ TextureImporter:
       name: props_21
       rect:
         serializedVersion: 2
-        x: 208
+        x: 176
         y: 16
         width: 16
-        height: 16
+        height: 9
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -585,6 +585,27 @@ TextureImporter:
       bones: []
       spriteID: a79fb0f00af97e04694661e0f16464a8
       internalID: 1367285715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: props_22
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56e2374408e69bb47821c47cdbe7c04f
+      internalID: -1269936609
       vertices: []
       indices: 
       edges: []
@@ -604,20 +625,21 @@ TextureImporter:
       props_4: 611659186
       props_8: 956865186
       props_21: 1367285715
-      props_1: 733305579
+      tree_cut: 1058139494
       props_9: 1384485268
       props_18: -270581860
       props_11: 779863940
       props_5: -1313106128
       props_14: -1518916314
+      tree_full: 733305579
       props_19: 15796454
       props_16: 1075796905
       props_2: 2053383084
       props_12: 1356608543
-      props_0: 1058139494
       props_20: -1962553433
       props_13: -1968456626
       props_15: -1538452963
+      props_22: -1269936609
       props_10: 1270298775
       props_17: 1484212873
       props_7: 1124918245

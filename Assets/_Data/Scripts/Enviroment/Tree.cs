@@ -4,11 +4,22 @@ using UnityEngine;
 
 public class Tree : MonoBehaviour, IInteractable
 {
-    private bool isGrown;
+    [SerializeField] Sprite grownsprite, cutSprite;
+    private bool isGrown =true;
+
+    SpriteRenderer sr;
+
+    private void Awake()
+    {
+        sr = GetComponent<SpriteRenderer>();
+        sr.sprite = grownsprite;
+    }
 
     public void Interact()
     {
-        throw new System.NotImplementedException();
+        Debug.Log("Cut.");
+        sr.sprite = cutSprite;
+        isGrown = false;
     }
     public bool CanInteract()
     {
