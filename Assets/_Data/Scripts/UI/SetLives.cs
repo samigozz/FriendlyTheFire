@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class SetLives : MonoBehaviour
 {
     [SerializeField]
-    private Data myData;
+    private IntValue playerLives;
 
     [SerializeField]
     private Transform LifeContainer;
@@ -16,20 +16,16 @@ public class SetLives : MonoBehaviour
 
     private List<GameObject> livesRenderers = new();
 
-    private int playerLifes;
-
     void Start()
     {
-        livesRenderers.Capacity = myData.getLives();
+        livesRenderers.Capacity = playerLives.runtimeLives;
 
-        playerLifes = myData.getLives();
-
-        UpdateLives();
+        SetInitialLives();
     }
 
-    public void UpdateLives()
-    {   
-        for (int i = 0; i < playerLifes; i++)
+    public void SetInitialLives()
+    {
+        for (int i = 0; i < playerLives.runtimeLives; i++)
         {
             var lifeObject = Instantiate(livesSprite);
             livesRenderers.Add(lifeObject);
@@ -39,11 +35,11 @@ public class SetLives : MonoBehaviour
         }
     }
 
-    public void SubstractLifes(int damage)
+    public void UpdateLives()
     {
-        livesRenderers[playerLifes - 1].gameObject.SetActive(false);
-
-        playerLifes -= damage;
-
+        if (LifeContainer.childCount > 0)
+        {
+            LifeContainer.GetChild(playerLives.runtimeLives).gameObject.SetActive(false);
+        }
     }
 }

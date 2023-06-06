@@ -305,6 +305,50 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &298418801 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2465812999478357342, guid: c8b99c707ae524745a121e2be75e1302, type: 3}
+  m_PrefabInstance: {fileID: 7912418400824337302}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &298418803 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4204426550867126117, guid: c8b99c707ae524745a121e2be75e1302, type: 3}
+  m_PrefabInstance: {fileID: 7912418400824337302}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 298418801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72047eb92d92795428d7ea49f2855688, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &298418804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 298418801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 521e5273dafaaa744802a2e9a7af9763, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 989195411b0453a46a451a285897524c, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 298418803}
+        m_TargetAssemblyTypeName: SetLives, Assembly-CSharp
+        m_MethodName: UpdateLives
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &444857780
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -463,6 +507,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &589509666 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7117449965487643998, guid: f3d3119dd1205c44e85d5a168428dc65, type: 3}
+  m_PrefabInstance: {fileID: 3219262995092112114}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &589509671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 589509666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f298d77f3c42375478f497929141eb7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerLives: {fileID: 11400000, guid: 771727e0cc598d64fac00aea86f14ba3, type: 2}
+  OnTakeDamage: {fileID: 11400000, guid: 989195411b0453a46a451a285897524c, type: 2}
 --- !u!1 &698766963
 GameObject:
   m_ObjectHideFlags: 0
@@ -1244,6 +1307,10 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: 454528597e2bec140bffa9f746703c27, type: 2}
+    - target: {fileID: 7117449965487643994, guid: f3d3119dd1205c44e85d5a168428dc65, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3d3119dd1205c44e85d5a168428dc65, type: 3}
 --- !u!1001 &5239402720640280074
@@ -1314,6 +1381,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4204426550867126117, guid: c8b99c707ae524745a121e2be75e1302, type: 3}
+      propertyPath: playerLives
+      value: 
+      objectReference: {fileID: 11400000, guid: 771727e0cc598d64fac00aea86f14ba3, type: 2}
+    - target: {fileID: 5119516939574005592, guid: c8b99c707ae524745a121e2be75e1302, type: 3}
+      propertyPath: m_Spacing.x
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5119516939574005592, guid: c8b99c707ae524745a121e2be75e1302, type: 3}
+      propertyPath: m_CellSize.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5119516939574005592, guid: c8b99c707ae524745a121e2be75e1302, type: 3}
+      propertyPath: m_CellSize.y
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881982819483211337, guid: c8b99c707ae524745a121e2be75e1302, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -679
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881982819483211337, guid: c8b99c707ae524745a121e2be75e1302, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 442
+      objectReference: {fileID: 0}
     - target: {fileID: 7912418401972223047, guid: c8b99c707ae524745a121e2be75e1302, type: 3}
       propertyPath: m_Pivot.x
       value: 0

@@ -5,27 +5,17 @@ using UnityEngine;
 public class SpikeDamage : MonoBehaviour
 {
     [SerializeField]
-    private GameObject playerCanvas;
-
-    SetLives setLives;
-
-    [SerializeField]
     private int damage;
 
     private void Start()
     {
-        setLives = new SetLives();
-
         damage = 1;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        var playerLives = collision.gameObject.GetComponent<SetLives>();
+        var playerTakeDamage = collision.gameObject.GetComponent<TakeDamage>();
 
-        if(playerLives != null)
-        {
-            playerLives.SubstractLifes(damage);
-        }
+        playerTakeDamage.SubstractLifes(damage);
     }
 }
