@@ -2,18 +2,16 @@ using UnityEngine;
 using DG.Tweening;
 public class Tree : MonoBehaviour, IInteractable
 {
-    [SerializeField] SpriteRenderer treeSR, stumpSR;
-    [SerializeField] Sprite fullTree, cutTree;
     private bool isGrown =true;
-
     private int health = 3;
 
+    [Header("Sprites")]
+    [SerializeField] SpriteRenderer treeSR, stumpSR;
+    [SerializeField] Sprite fullTree, cutTree;
+
     [Header("Animation")]
-
     [SerializeField] Vector3 shakeStrength;
-
     [SerializeField] float fallDuration = 1f;  
-
     Sequence sequence;
 
     private void Start()
