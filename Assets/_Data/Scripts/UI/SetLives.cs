@@ -35,11 +35,34 @@ public class SetLives : MonoBehaviour
         }
     }
 
-    public void UpdateLives()
+    public void ReduceLives()
     {
         if (LifeContainer.childCount > 0)
         {
             LifeContainer.GetChild(playerLives.runtimeLives).gameObject.SetActive(false);
         }
+    }
+
+    public void AddLives()
+    {
+        int actuallives = GetChildCounts(LifeContainer.gameObject);
+        if (actuallives < 3)
+        {
+            LifeContainer.GetChild(actuallives).gameObject.SetActive(true);
+        }
+    }
+
+    private int GetChildCounts(GameObject gameobject) 
+    {
+        int activeLives = 0;
+        for (int i = 0; i < gameobject.transform.childCount; i++)
+        {
+            if (gameobject.transform.GetChild(i).gameObject.activeSelf == true)
+            {
+                activeLives++;
+            }
+        }
+
+        return activeLives;
     }
 }
