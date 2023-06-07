@@ -84,6 +84,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &4043123417194197465
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5760719519291725147}
+  m_Layer: 0
+  m_Name: PlayerPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5760719519291725147
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4043123417194197465}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7118564045615258953}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7118564045615258954
 GameObject:
   m_ObjectHideFlags: 0
@@ -117,6 +148,7 @@ Transform:
   m_Children:
   - {fileID: 4359648088051420248}
   - {fileID: 4188123655949898464}
+  - {fileID: 5760719519291725147}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -160,7 +192,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   treeSR: {fileID: 6283030108776148826}
   stumpSR: {fileID: 1672371944025760339}
-  shakeStrength: {x: 15, y: 10, z: 0}
+  fullTree: {fileID: -1365838915, guid: f44311ba4cab392459f2b745f930f4ad, type: 3}
+  cutTree: {fileID: 329205219, guid: f44311ba4cab392459f2b745f930f4ad, type: 3}
+  shakeStrength: {x: 20, y: 10, z: 0}
+  fallDuration: 1
 --- !u!114 &2987131906759140331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,7 +203,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7118564045615258954}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d0390bd8b8ffd640b34fe25065ff1df, type: 3}
   m_Name: 

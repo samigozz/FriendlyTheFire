@@ -3343,13 +3343,5 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree
       objectReference: {fileID: 0}
-    - target: {fileID: 7146654136836541074, guid: dd2b8cab0d1d4d040b0c2ee4a211281f, type: 3}
-      propertyPath: grownsprite
-      value: 
-      objectReference: {fileID: 1017328748, guid: f44311ba4cab392459f2b745f930f4ad, type: 3}
-    - target: {fileID: 7146654136836541074, guid: dd2b8cab0d1d4d040b0c2ee4a211281f, type: 3}
-      propertyPath: shakeStrength.x
-      value: 20
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd2b8cab0d1d4d040b0c2ee4a211281f, type: 3}

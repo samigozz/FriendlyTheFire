@@ -25,7 +25,6 @@ public class InteractionDetection : MonoBehaviour
 
         if (interactable != null && interactable.CanInteract())
         {
-            Debug.Log("Interactable found.");
             interactablesInRange.Add(interactable);
         }
     }
