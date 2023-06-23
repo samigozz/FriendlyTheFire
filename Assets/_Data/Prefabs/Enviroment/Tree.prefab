@@ -177,7 +177,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8601439715949221027}
-  - component: {fileID: 2743623567525813942}
+  - component: {fileID: 4008650215033127043}
   m_Layer: 0
   m_Name: TimedMinigame
   m_TagString: Untagged
@@ -202,7 +202,7 @@ Transform:
   m_Father: {fileID: 7118564045615258953}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2743623567525813942
+--- !u!114 &4008650215033127043
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -557,6 +557,7 @@ MonoBehaviour:
   fallDuration: 1
   target: {fileID: 8758341428847985808}
   pivot: {fileID: 4784371588179085123}
+  rotatingMiniGame: {fileID: 2796114157776397546}
   reactThreshold: 0.97
 --- !u!1 &8920809360219575525
 GameObject:

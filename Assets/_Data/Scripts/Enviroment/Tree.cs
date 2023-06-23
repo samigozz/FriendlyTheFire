@@ -26,40 +26,55 @@ public class Tree : MonoBehaviour, IInteractable
     [SerializeField] private Transform target;
     [SerializeField] private Transform pivot;
 
+    [SerializeField] private GameObject rotatingMiniGame;
+
     [SerializeField, Range(0f, 1f)] private float reactThreshold = 0.97f;
     
 
     private void Start()
     {
         stumpSR.gameObject.SetActive(false);
+        //Hide the minigame
+        rotatingMiniGame.SetActive(false);
+    }
+    
+    // Triggers for showing and hiding the minigame, not very efficient but works.
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (isGrown && other.gameObject.tag == "Player")
+        {
+            rotatingMiniGame.SetActive(true);
+        }
+    }
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (isGrown && other.gameObject.tag == "Player")
+        {
+            rotatingMiniGame.SetActive(false);
+        }
     }
 
-    public void Interact(Transform player = default(Transform))
+    public void Interact()
     {
-        player.position = cutPos.position;
+        if (!isGrown)
+            return;
         
-        if (Input.GetMouseButtonDown(0))
+        float result = Mathf.Clamp(Vector3.Dot(target.transform.up, pivot.transform.up), 0f, 1f);
+
+        if (result >= reactThreshold || result <= -reactThreshold)
         {
-            float result = Mathf.Clamp(Vector3.Dot(target.transform.up, pivot.transform.up), 0f, 1f);
-            Debug.Log(result);
-            if (result >= reactThreshold || result <= -reactThreshold)
-            {
-                // Cutting tree animation and health.
-                Shake();
-                health--;
-                if (health <= 0)
-                {
-                    treeSR.sprite = cutTree;
-                    Fall();
-                    stumpSR.gameObject.SetActive(true);
-                    isGrown = false;
-                }
-            }
-            else
-            {
-                Debug.Log("Miss!");
-            }
+            // Cutting tree animation and health.
+            Shake();
+            health--;
             
+            if (health <= 0)
+            {
+                isGrown = false;
+                rotatingMiniGame.SetActive(false);
+                treeSR.sprite = cutTree;
+                stumpSR.gameObject.SetActive(true);
+                Fall();
+            }
         }
     }
 
@@ -80,11 +95,8 @@ public class Tree : MonoBehaviour, IInteractable
 
         sequence = DOTween.Sequence();
 
+        sequence.Append(treeSR.transform.DOShakeRotation(1f, shakeStrength*0.5f));
         sequence.Append(treeSR.transform.DORotate(new Vector3(0f, 0f, randRot[Random.Range(0,randRot.Length)]), fallDuration).SetEase(Ease.InExpo));
         sequence.Append(treeSR.DOFade(0f, 1f).SetDelay(1f).SetEase(Ease.InOutSine));
-    }
-    private void RotateQuickTimeEvent()
-    {
-        pivot.DORotate(new Vector3(0f, 0f, -45f), 1f).SetEase(Ease.InOutCubic).SetLoops(-1, LoopType.Yoyo);
     }
 }

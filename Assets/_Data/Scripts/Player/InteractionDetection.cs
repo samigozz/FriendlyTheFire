@@ -6,8 +6,6 @@ public class InteractionDetection : MonoBehaviour
 {
     private List<IInteractable> interactablesInRange = new List<IInteractable>();
 
-    [SerializeField] private Transform playerTF;
-
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E) && interactablesInRange.Count > 0)
@@ -19,7 +17,8 @@ public class InteractionDetection : MonoBehaviour
                 interactablesInRange.Remove(interactable);
             }
             
-            interactable.Interact(playerTF);
+            interactable.Interact();
+
         }
     }
 
