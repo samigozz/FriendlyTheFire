@@ -22,6 +22,11 @@ public class FriendlyHeal : MonoBehaviour
         Debug.Log("por favor");
         StartCoroutine(FriendlyHealPlayer(collision));
     }
+    
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        inRange = false; 
+    }
 
     private IEnumerator FriendlyHealPlayer(Collider2D collision)
     {
@@ -32,10 +37,5 @@ public class FriendlyHeal : MonoBehaviour
             var playerHeal = collision.gameObject.GetComponent<PlayerAddLife>();
             playerHeal.AddLife(heal);
         }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        inRange = false; 
     }
 }
