@@ -19,7 +19,7 @@ public class FriendlyHeal : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         inRange = true;
-        Debug.Log("por favor");
+        
         StartCoroutine(FriendlyHealPlayer(collision));
     }
     
