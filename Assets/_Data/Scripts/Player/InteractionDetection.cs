@@ -11,11 +11,14 @@ public class InteractionDetection : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && interactablesInRange.Count > 0)
         {
             var interactable = interactablesInRange[0];
-            interactable.Interact();
+            
             if (!interactable.CanInteract())
             {
                 interactablesInRange.Remove(interactable);
             }
+            
+            interactable.Interact();
+
         }
     }
 
