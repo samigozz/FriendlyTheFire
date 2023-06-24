@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
     private SpriteRenderer sr;
     
     public bool isGrounded = false;
+    public bool isCeling = false;
     [SerializeField] LayerMask groundMask;
 
     private int dir = 1;
@@ -33,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
 	private void FixedUpdate()
     {
         isGrounded = groundRaycast();
+        isCeling = celingRaycast();
         
         anim.SetBool("isWalking", false);
         
@@ -66,7 +68,7 @@ public class PlayerMovement : MonoBehaviour
             sr.flipX = false;
         }
 
-        if (Input.GetKey(KeyCode.Space) && isGrounded)
+        if (Input.GetKey(KeyCode.Space) && isGrounded && !isCeling)
         {
             anim.SetBool("isJumping", true);
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
@@ -91,5 +93,10 @@ public class PlayerMovement : MonoBehaviour
     private bool groundRaycast()
     {
         return Physics2D.Raycast(transform.position, Vector2.down, 0.6f, groundMask);
+    }
+    
+    private bool celingRaycast()
+    {
+        return Physics2D.Raycast(transform.position, Vector2.up, 1f, groundMask);
     }
 }

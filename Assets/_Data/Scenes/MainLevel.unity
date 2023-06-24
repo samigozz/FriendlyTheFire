@@ -2294,12 +2294,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7117449965487643994, guid: f3d3119dd1205c44e85d5a168428dc65, type: 3}
+      propertyPath: m_LinearDrag
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7117449965487643994, guid: f3d3119dd1205c44e85d5a168428dc65, type: 3}
       propertyPath: m_Interpolate
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7117449965487643998, guid: f3d3119dd1205c44e85d5a168428dc65, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 7117449965487643999, guid: f3d3119dd1205c44e85d5a168428dc65, type: 3}
+      propertyPath: speedGrounded
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3d3119dd1205c44e85d5a168428dc65, type: 3}
