@@ -1,18 +1,20 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
+using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
-using UnityEngine.LowLevel;
-using UnityEngine.PlayerLoop;
 using UnityEngine.SceneManagement;
-using Update = Unity.VisualScripting.Update;
+using Image = UnityEngine.UI.Image;
 
 public class RestartGame : MonoBehaviour
 {
     [SerializeField]
     private IntValue playerLives;
 
-    [SerializeField] private GameObject GameOverPanel;
+    private float backgroundAlpha;
+    private float elapsedTime;
+    private float alphaAmount = 0.005f;
+
+    [SerializeField]
+    private GameObject GameOverPanel;
     
     private void Update()
     {
@@ -20,6 +22,13 @@ public class RestartGame : MonoBehaviour
         {
             Time.timeScale = 0;
             GameOverPanel.SetActive(true);
+            
+            elapsedTime += alphaAmount;
+            backgroundAlpha = Mathf.Lerp(0, 1, elapsedTime);
+            Image panelImage = GameOverPanel.GetComponent<Image>();
+            Color panelColor = panelImage.color;
+            panelColor.a = backgroundAlpha;
+            panelImage.color = panelColor;
         }
     }
 
