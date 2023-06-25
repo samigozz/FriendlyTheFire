@@ -16,7 +16,8 @@ public class PlayerMovement : MonoBehaviour
     private SpriteRenderer sr;
 
     public bool isGrounded = false;
-    [SerializeField] LayerMask groundMask;
+    [SerializeField]
+    LayerMask groundMask;
 
     void Start()
     {

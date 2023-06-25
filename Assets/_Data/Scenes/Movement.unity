@@ -327,6 +327,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spike
       objectReference: {fileID: 0}
+    - target: {fileID: 6455374177261286943, guid: 26fd7169b4eb20a4d8d047cf49eaa628, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26fd7169b4eb20a4d8d047cf49eaa628, type: 3}
 --- !u!1 &458932318 stripped
@@ -334,6 +338,20 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7912418401972223067, guid: c8b99c707ae524745a121e2be75e1302, type: 3}
   m_PrefabInstance: {fileID: 7912418400824337302}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &458932323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 458932318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 940021238584ab541a99ebbc73d74560, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerLives: {fileID: 11400000, guid: 771727e0cc598d64fac00aea86f14ba3, type: 2}
+  GameOverPanel: {fileID: 811753278}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -496,6 +514,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerLives: {fileID: 11400000, guid: 771727e0cc598d64fac00aea86f14ba3, type: 2}
   OnHealLife: {fileID: 11400000, guid: 221a3c49c92e3204594d32e4dcc797bf, type: 2}
+--- !u!1 &811753278 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5655672493597222218, guid: c8b99c707ae524745a121e2be75e1302, type: 3}
+  m_PrefabInstance: {fileID: 7912418400824337302}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1008557802 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2153713017058092729, guid: c8b99c707ae524745a121e2be75e1302, type: 3}
