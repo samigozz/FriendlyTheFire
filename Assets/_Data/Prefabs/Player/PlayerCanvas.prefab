@@ -120,7 +120,7 @@ MonoBehaviour:
   Response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2153713017058092729}
         m_TargetAssemblyTypeName: SetLives, Assembly-CSharp
         m_MethodName: AddLives
         m_Mode: 1
@@ -148,7 +148,7 @@ MonoBehaviour:
   Response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2153713017058092729}
         m_TargetAssemblyTypeName: SetLives, Assembly-CSharp
         m_MethodName: ReduceLives
         m_Mode: 1
@@ -865,6 +865,7 @@ GameObject:
   - component: {fileID: 7912418401972223046}
   - component: {fileID: 7912418401972223065}
   - component: {fileID: 7912418401972223064}
+  - component: {fileID: 458932323}
   m_Layer: 5
   m_Name: PlayerCanvas
   m_TagString: Untagged
@@ -956,6 +957,20 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &458932323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7912418401972223067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 940021238584ab541a99ebbc73d74560, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerLives: {fileID: 11400000, guid: 771727e0cc598d64fac00aea86f14ba3, type: 2}
+  GameOverPanel: {fileID: 5655672493597222218}
 --- !u!1 &8411625510168706011
 GameObject:
   m_ObjectHideFlags: 0
