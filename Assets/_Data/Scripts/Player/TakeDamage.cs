@@ -11,7 +11,7 @@ public class TakeDamage : MonoBehaviour
 
     public void SubstractLifes(int damage)
     {
-        playerLives.runtimeLives -= damage;
+        playerLives.runtimeValue -= damage;
 
         OnTakeDamage.Raise();
     }

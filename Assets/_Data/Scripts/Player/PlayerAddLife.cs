@@ -12,7 +12,7 @@ public class PlayerAddLife : MonoBehaviour
     public void AddLife(int heal)
     {
 
-        playerLives.runtimeLives += heal;
+        playerLives.runtimeValue += heal;
 
         OnHealLife.Raise();
     }

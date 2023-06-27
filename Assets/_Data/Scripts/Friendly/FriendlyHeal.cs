@@ -30,7 +30,7 @@ public class FriendlyHeal : MonoBehaviour
 
     private IEnumerator FriendlyHealPlayer(Collider2D collision)
     {
-        while(inRange && playerLives.runtimeLives < 3)
+        while(inRange && playerLives.runtimeValue < 3)
         {
             yield return new WaitForSeconds(5.0f);
 

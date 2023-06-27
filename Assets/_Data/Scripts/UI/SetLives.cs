@@ -18,14 +18,14 @@ public class SetLives : MonoBehaviour
 
     void Start()
     {
-        livesRenderers.Capacity = playerLives.runtimeLives;
+        livesRenderers.Capacity = playerLives.runtimeValue;
 
         SetInitialLives();
     }
 
     public void SetInitialLives()
     {
-        for (int i = 0; i < playerLives.runtimeLives; i++)
+        for (int i = 0; i < playerLives.runtimeValue; i++)
         {
             var lifeObject = Instantiate(livesSprite);
             livesRenderers.Add(lifeObject);
@@ -39,7 +39,7 @@ public class SetLives : MonoBehaviour
     {
         if (LifeContainer.childCount > 0)
         {
-            LifeContainer.GetChild(playerLives.runtimeLives).gameObject.SetActive(false);
+            LifeContainer.GetChild(playerLives.runtimeValue).gameObject.SetActive(false);
         }
     }
 
