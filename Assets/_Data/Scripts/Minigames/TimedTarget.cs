@@ -6,9 +6,9 @@ using DG.Tweening;
 
 public class TimedTarget : MonoBehaviour
 {
-    [SerializeField] Transform target, pivot;
+    [SerializeField] Transform  pivot;
 
-    [SerializeField, Range(0f, 1f)] private float threshold = 0.97f;
+    [SerializeField] private float duration = 1f;
 
     private Quaternion startRot;
 
@@ -28,6 +28,6 @@ public class TimedTarget : MonoBehaviour
 
     private void RotateAim()
     {
-        anim = pivot.DORotate(new Vector3(0f, 0f, -45f), 1f).SetEase(Ease.InOutCubic).SetLoops(-1, LoopType.Yoyo);
+        anim = pivot.DORotate(new Vector3(0f, 0f, -45f), duration).SetEase(Ease.InOutCubic).SetLoops(-1, LoopType.Yoyo);
     }
 }
