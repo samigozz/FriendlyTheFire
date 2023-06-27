@@ -114,6 +114,7 @@ MonoBehaviour:
   jumpForce: 11.5
   anim: {fileID: 3969070175873218058}
   isGrounded: 0
+  isCeling: 0
   groundMask:
     serializedVersion: 2
     m_Bits: 64

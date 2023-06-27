@@ -14,12 +14,6 @@ public class FriendlyLife : MonoBehaviour
         StartCoroutine(FriendlyLifeDown());
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private IEnumerator FriendlyLifeDown()
     {
         while (true)

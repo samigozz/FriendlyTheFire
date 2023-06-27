@@ -472,7 +472,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.23458752}
+  m_Offset: {x: -0.012483358, y: 0.034851223}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -483,7 +483,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.3028755, y: 1.4691751}
+  m_Size: {x: 2.1294236, y: 1.0697021}
   m_EdgeRadius: 0
 --- !u!114 &588583821
 MonoBehaviour:
@@ -532,6 +532,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerLives: {fileID: 11400000, guid: 771727e0cc598d64fac00aea86f14ba3, type: 2}
   OnHealLife: {fileID: 11400000, guid: 221a3c49c92e3204594d32e4dcc797bf, type: 2}
+--- !u!114 &589509677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 589509666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d0a9fd78de3f74468fd86f2b2d165b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FLife: {fileID: 577432063}
+  wood: 3
 --- !u!1 &811753278 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5655672493597222218, guid: c8b99c707ae524745a121e2be75e1302, type: 3}
@@ -2231,6 +2245,10 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: 454528597e2bec140bffa9f746703c27, type: 2}
+    - target: {fileID: 1948287638105283821, guid: f3d3119dd1205c44e85d5a168428dc65, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3219262995970771824, guid: f3d3119dd1205c44e85d5a168428dc65, type: 3}
       propertyPath: m_Name
       value: Player
@@ -2279,6 +2297,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6733126450995338289, guid: f3d3119dd1205c44e85d5a168428dc65, type: 3}
+      propertyPath: FLife
+      value: 
+      objectReference: {fileID: 577432063}
     - target: {fileID: 7117449965487643993, guid: f3d3119dd1205c44e85d5a168428dc65, type: 3}
       propertyPath: m_RootOrder
       value: 0
