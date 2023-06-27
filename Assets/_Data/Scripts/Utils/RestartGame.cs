@@ -18,7 +18,7 @@ public class RestartGame : MonoBehaviour
     
     private void Update()
     {
-        if (playerLives.runtimeLives == 0)
+        if (playerLives.runtimeValue== 0)
         {
             Time.timeScale = 0;
             GameOverPanel.SetActive(true);
@@ -34,7 +34,7 @@ public class RestartGame : MonoBehaviour
 
     public void RestarGame()
     {
-        playerLives.runtimeLives = 3;
+        playerLives.runtimeValue = 3;
         Time.timeScale = 1;
         GameOverPanel.SetActive(false);
         SceneManager.LoadScene("Movement");
