@@ -1905,10 +1905,6 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1609894223}
-    - target: {fileID: 8359243148701039997, guid: b2038a1e04d59524a99d498d6c06ed5e, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8359243148701039998, guid: b2038a1e04d59524a99d498d6c06ed5e, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -1953,48 +1949,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8359243148701039999, guid: b2038a1e04d59524a99d498d6c06ed5e, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8359243148701039999, guid: b2038a1e04d59524a99d498d6c06ed5e, type: 3}
-      propertyPath: m_UpscaleRT
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8359243148701040001, guid: b2038a1e04d59524a99d498d6c06ed5e, type: 3}
-      propertyPath: m_ForceIntoRT
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8359243148701040001, guid: b2038a1e04d59524a99d498d6c06ed5e, type: 3}
       propertyPath: near clip plane
       value: 0.001
-      objectReference: {fileID: 0}
-    - target: {fileID: 8359243148701040001, guid: b2038a1e04d59524a99d498d6c06ed5e, type: 3}
-      propertyPath: orthographic size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8359243148701040001, guid: b2038a1e04d59524a99d498d6c06ed5e, type: 3}
-      propertyPath: m_NormalizedViewPortRect.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8359243148701040001, guid: b2038a1e04d59524a99d498d6c06ed5e, type: 3}
-      propertyPath: m_NormalizedViewPortRect.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8359243148701040001, guid: b2038a1e04d59524a99d498d6c06ed5e, type: 3}
-      propertyPath: m_NormalizedViewPortRect.width
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8359243148701040001, guid: b2038a1e04d59524a99d498d6c06ed5e, type: 3}
-      propertyPath: m_NormalizedViewPortRect.height
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8359243148701040002, guid: b2038a1e04d59524a99d498d6c06ed5e, type: 3}
       propertyPath: m_Name
       value: Main Camera
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 8359243148701039999, guid: b2038a1e04d59524a99d498d6c06ed5e, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2038a1e04d59524a99d498d6c06ed5e, type: 3}
 --- !u!1001 &1124624732
 PrefabInstance:
