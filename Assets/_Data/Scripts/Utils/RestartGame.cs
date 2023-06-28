@@ -22,7 +22,7 @@ public class RestartGame : MonoBehaviour
     
     private void Update()
     {
-        if (playerLives.runtimeLives == 0 || FLife.gameObject.GetComponent<Slider>().value == 0f)
+        if (playerLives.runtimeValue == 0 || FLife.gameObject.GetComponent<Slider>().value == 0f)
         {
             Time.timeScale = 0;
             GameOverPanel.SetActive(true);
@@ -39,7 +39,7 @@ public class RestartGame : MonoBehaviour
 
     public void RestarGame()
     {
-        playerLives.runtimeLives = 3;
+        playerLives.runtimeValue = 3;
         FLife.gameObject.GetComponent<Slider>().value = 0.5f;
         FCanvas.SetActive(true);
         Time.timeScale = 1;
