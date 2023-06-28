@@ -11,10 +11,12 @@ public class FriendlyInteract : MonoBehaviour, IInteractable
     [SerializeField] private IntValue wood;
     [SerializeField] private GameEvent onUpdateWood;
 
+    private float woodHeal = 0.012f;
+
     public void Interact()
     {
         wood.runtimeValue--;
-        FLife.gameObject.GetComponent<Slider>().value += 0.01f;
+        FLife.gameObject.GetComponent<Slider>().value += woodHeal;
         onUpdateWood.Raise();
     }
 

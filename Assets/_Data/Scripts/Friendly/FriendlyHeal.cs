@@ -29,7 +29,7 @@ public class FriendlyHeal : MonoBehaviour
     
     private void OnTriggerExit2D(Collider2D collision)
     {
-        inRange = false; 
+        inRange = false;
         KeyPrompt.SetActive(false);
     }
 
@@ -38,9 +38,12 @@ public class FriendlyHeal : MonoBehaviour
         while(inRange && playerLives.runtimeValue < 3)
         {
             yield return new WaitForSeconds(5.0f);
-
-            var playerHeal = collision.gameObject.GetComponent<PlayerAddLife>();
-            playerHeal.AddLife(heal);
+            
+            if (inRange)
+            {
+                var playerHeal = collision.gameObject.GetComponent<PlayerAddLife>();
+                playerHeal.AddLife(heal);
+            }
         }
     }
 }

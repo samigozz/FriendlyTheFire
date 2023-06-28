@@ -9,6 +9,8 @@ public class RestartGame : MonoBehaviour
     [SerializeField]
     private IntValue playerLives;
     [SerializeField]
+    private IntValue wood;
+    [SerializeField]
     private GameObject FLife;
     [SerializeField]
     private GameObject FCanvas;
@@ -40,6 +42,7 @@ public class RestartGame : MonoBehaviour
     public void RestarGame()
     {
         playerLives.runtimeValue = 3;
+        wood.runtimeValue = 0;
         FLife.gameObject.GetComponent<Slider>().value = 0.5f;
         FCanvas.SetActive(true);
         Time.timeScale = 1;
