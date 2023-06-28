@@ -42,7 +42,11 @@ public class FriendlyHeal : MonoBehaviour
             if (inRange)
             {
                 var playerHeal = collision.gameObject.GetComponent<PlayerAddLife>();
-                playerHeal.AddLife(heal);
+                
+                if (playerHeal != null)
+                {
+                    playerHeal.AddLife(heal);
+                }
             }
         }
     }
