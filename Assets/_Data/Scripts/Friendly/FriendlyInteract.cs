@@ -13,7 +13,6 @@ public class FriendlyInteract : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        print("entra");
         wood.runtimeValue--;
         FLife.gameObject.GetComponent<Slider>().value += 0.01f;
         onUpdateWood.Raise();
