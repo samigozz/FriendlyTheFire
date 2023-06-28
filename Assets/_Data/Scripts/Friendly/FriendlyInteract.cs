@@ -7,19 +7,21 @@ public class FriendlyInteract : MonoBehaviour, IInteractable
 {
     [SerializeField]
     private GameObject FLife;
-    
-    private int wood = 3;
+
+    [SerializeField] private IntValue wood;
+    [SerializeField] private GameEvent onUpdateWood;
 
     public void Interact()
     {
         print("entra");
-        wood--;
-        FLife.gameObject.GetComponent<Slider>().value += 0.03f;
+        wood.runtimeValue--;
+        FLife.gameObject.GetComponent<Slider>().value += 0.01f;
+        onUpdateWood.Raise();
     }
 
     public bool CanInteract()
     {
-        if (wood > 0)
+        if (wood.runtimeValue > 1)
         {
             return true;
         }

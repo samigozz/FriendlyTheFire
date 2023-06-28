@@ -210,7 +210,7 @@ RectTransform:
   - {fileID: 1039662634361960549}
   - {fileID: 4757164996241637283}
   m_Father: {fileID: 7912418401972223047}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -538,7 +538,7 @@ RectTransform:
   - {fileID: 3597043384081604512}
   - {fileID: 1704365847567395274}
   m_Father: {fileID: 7912418401972223047}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -886,8 +886,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5881982819483211337}
-  - {fileID: 6424831972924559367}
   - {fileID: 5102254846335769577}
+  - {fileID: 6424831972924559367}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -970,6 +970,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerLives: {fileID: 11400000, guid: 771727e0cc598d64fac00aea86f14ba3, type: 2}
+  FLife: {fileID: 0}
+  FCanvas: {fileID: 0}
   GameOverPanel: {fileID: 5655672493597222218}
 --- !u!1 &8411625510168706011
 GameObject:

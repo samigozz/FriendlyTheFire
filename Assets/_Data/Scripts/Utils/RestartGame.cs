@@ -44,6 +44,6 @@ public class RestartGame : MonoBehaviour
         FCanvas.SetActive(true);
         Time.timeScale = 1;
         GameOverPanel.SetActive(false);
-        SceneManager.LoadScene("Movement");
+        SceneManager.LoadScene("MainLevel");
     }
 }
