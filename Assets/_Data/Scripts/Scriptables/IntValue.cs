@@ -2,27 +2,28 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 [CreateAssetMenu(fileName = "IntValue", menuName = "Scriptable/IntValue")]
 public class IntValue : ScriptableObject, ISerializationCallbackReceiver
 {
-    public int lives;
+    public int value;
 
     [NonSerialized]
-    public int runtimeLives;
+    public int runtimeValue;
 
     public void OnAfterDeserialize()
     {
-        runtimeLives = lives;
+        runtimeValue = value;
     }
     public void OnBeforeSerialize()
     {
 
     }
 
-    public int getLives()
+    public int getValue()
     {
-        return lives;
+        return value;
     }
 
 }

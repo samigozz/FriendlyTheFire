@@ -20,8 +20,7 @@ public class PlayerMovement : MonoBehaviour
     
     public bool isGrounded = false;
     public bool isCeling = false;
-    [SerializeField]
-    LayerMask groundMask;
+    [SerializeField] LayerMask groundMask;
 
     private int dir = 1;
 
