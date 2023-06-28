@@ -9,7 +9,6 @@ public class WoodToFriendly : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        print("interactaleinrabge " + interactablesInRange.Count);
         if (Input.GetKeyDown(KeyCode.E) && interactablesInRange.Count > 0)
         {
             var interactable = interactablesInRange[0];
