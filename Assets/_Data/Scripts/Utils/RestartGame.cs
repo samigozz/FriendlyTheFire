@@ -1,12 +1,17 @@
 using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Slider = UnityEngine.UI.Slider;
 using Image = UnityEngine.UI.Image;
 
 public class RestartGame : MonoBehaviour
 {
     [SerializeField]
     private IntValue playerLives;
+    [SerializeField]
+    private GameObject FLife;
+    [SerializeField]
+    private GameObject FCanvas;
 
     private float backgroundAlpha;
     private float elapsedTime;
@@ -17,10 +22,11 @@ public class RestartGame : MonoBehaviour
     
     private void Update()
     {
-        if (playerLives.runtimeLives == 0)
+        if (playerLives.runtimeLives == 0 || FLife.gameObject.GetComponent<Slider>().value == 0f)
         {
             Time.timeScale = 0;
             GameOverPanel.SetActive(true);
+            FCanvas.SetActive(false);
             
             elapsedTime += alphaAmount;
             backgroundAlpha = Mathf.Lerp(0, 1, elapsedTime);
@@ -34,6 +40,8 @@ public class RestartGame : MonoBehaviour
     public void RestarGame()
     {
         playerLives.runtimeLives = 3;
+        FLife.gameObject.GetComponent<Slider>().value = 0.5f;
+        FCanvas.SetActive(true);
         Time.timeScale = 1;
         GameOverPanel.SetActive(false);
         SceneManager.LoadScene("Movement");
