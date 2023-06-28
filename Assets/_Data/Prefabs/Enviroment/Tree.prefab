@@ -650,6 +650,7 @@ MonoBehaviour:
   - 0.95
   - 0.99
   - 0.9985
+  woodPerTier: 020000000400000008000000
 --- !u!1 &8920809360219575525
 GameObject:
   m_ObjectHideFlags: 0

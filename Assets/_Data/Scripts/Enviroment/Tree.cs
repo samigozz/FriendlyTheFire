@@ -34,6 +34,7 @@ public class Tree : MonoBehaviour, IInteractable
 
     [SerializeField, Range(0f, 1f)] private float reactThreshold = 0.95f;
     [SerializeField, Range(0f, 1f)] private float[] tieredThresholds = new float[3] { 0.95f, 0.99f, 0.995f };
+    [SerializeField] private int[] woodPerTier = new int[3] { 1, 3, 5 };
 
 
     private void Start()
@@ -78,17 +79,17 @@ public class Tree : MonoBehaviour, IInteractable
             if ((result >= tieredThresholds[0] && result <= tieredThresholds[1]) || (result < -tieredThresholds[0] && result >= -tieredThresholds[1]))
             {
                 Debug.Log("Nice!");
-                gainedWood += 1;
+                gainedWood += woodPerTier[0];
             }
             else if ((result >= tieredThresholds[1] && result <= tieredThresholds[2]) || (result < -tieredThresholds[1] && result >= -tieredThresholds[2]))
             {
                 Debug.Log("Fantastic!");
-                gainedWood += 3;
+                gainedWood += woodPerTier[1];
             }
             else if (result > tieredThresholds[2] || result < -tieredThresholds[2])
             {
                 Debug.Log("Perfect!");
-                gainedWood += 5;
+                gainedWood += woodPerTier[2];
             }
 
             if (health <= 0)
