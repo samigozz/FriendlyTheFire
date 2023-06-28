@@ -351,6 +351,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerLives: {fileID: 11400000, guid: 771727e0cc598d64fac00aea86f14ba3, type: 2}
+  FLife: {fileID: 1243386239}
+  FCanvas: {fileID: 577432063}
   GameOverPanel: {fileID: 811753278}
 --- !u!1 &519420028
 GameObject:
@@ -472,7 +474,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.012483358, y: 0.034851223}
+  m_Offset: {x: -0.024967015, y: 0.034851193}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -483,7 +485,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.1294236, y: 1.0697021}
+  m_Size: {x: 1.5551819, y: 1.0697021}
   m_EdgeRadius: 0
 --- !u!114 &588583821
 MonoBehaviour:
@@ -499,6 +501,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heal: 1
   playerLives: {fileID: 11400000, guid: 771727e0cc598d64fac00aea86f14ba3, type: 2}
+--- !u!114 &588583824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588583817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b152212a7e5b9624d9ca7530d87871a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FLife: {fileID: 1243386239}
 --- !u!1 &589509666 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7117449965487643998, guid: f3d3119dd1205c44e85d5a168428dc65, type: 3}
@@ -544,8 +559,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d0a9fd78de3f74468fd86f2b2d165b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FLife: {fileID: 577432063}
-  wood: 3
 --- !u!1 &811753278 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5655672493597222218, guid: c8b99c707ae524745a121e2be75e1302, type: 3}
@@ -2340,6 +2353,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2669314245377499349, guid: 4aa4d2b331f35894fb0476caae04635a, type: 3}
       propertyPath: m_Name
+      value: Friendly
+      objectReference: {fileID: 0}
+    - target: {fileID: 2669314245377499349, guid: 4aa4d2b331f35894fb0476caae04635a, type: 3}
+      propertyPath: m_TagString
       value: Friendly
       objectReference: {fileID: 0}
     - target: {fileID: 2695506109652123835, guid: 4aa4d2b331f35894fb0476caae04635a, type: 3}
