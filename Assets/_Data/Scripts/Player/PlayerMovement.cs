@@ -24,11 +24,14 @@ public class PlayerMovement : MonoBehaviour
 
     private int dir = 1;
 
+    private bool canControl = true;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
 
         sr = transform.GetChild(0).GetComponent<SpriteRenderer>();
+        canControl = true;
     }
 
 	private void FixedUpdate()
@@ -37,6 +40,9 @@ public class PlayerMovement : MonoBehaviour
         isCeling = celingRaycast();
         
         anim.SetBool("isWalking", false);
+
+        if (!canControl)
+            return;
         
         if (Input.GetKey(KeyCode.A))
         {

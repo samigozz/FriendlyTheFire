@@ -22,6 +22,9 @@ public class RestartGame : MonoBehaviour
     [SerializeField]
     private GameObject GameOverPanel;
     
+    [SerializeField]
+    private GameObject VictoryPanel;
+    
     private void Update()
     {
         if (playerLives.runtimeValue == 0 || FLife.gameObject.GetComponent<Slider>().value == 0f)
@@ -33,6 +36,19 @@ public class RestartGame : MonoBehaviour
             elapsedTime += alphaAmount;
             backgroundAlpha = Mathf.Lerp(0, 1, elapsedTime);
             Image panelImage = GameOverPanel.GetComponent<Image>();
+            Color panelColor = panelImage.color;
+            panelColor.a = backgroundAlpha;
+            panelImage.color = panelColor;
+        }
+
+        if (FLife.gameObject.GetComponent<Slider>().value >= 0.98f)
+        {
+            VictoryPanel.SetActive(true);
+            FCanvas.SetActive(false);
+            
+            elapsedTime += alphaAmount;
+            backgroundAlpha = Mathf.Lerp(0, 1, elapsedTime);
+            Image panelImage = VictoryPanel.GetComponent<Image>();
             Color panelColor = panelImage.color;
             panelColor.a = backgroundAlpha;
             panelImage.color = panelColor;

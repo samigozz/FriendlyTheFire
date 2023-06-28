@@ -8,7 +8,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Data/Scenes/MainLevel.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
-    path: Assets/_Data/Scenes/Movement.unity
-    guid: b48838345dae3814c8cb438f11e58480
   m_configObjects: {}

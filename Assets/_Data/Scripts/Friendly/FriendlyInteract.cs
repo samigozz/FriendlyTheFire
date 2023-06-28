@@ -10,8 +10,7 @@ public class FriendlyInteract : MonoBehaviour, IInteractable
 
     [SerializeField] private IntValue wood;
     [SerializeField] private GameEvent onUpdateWood;
-
-    private float woodHeal = 0.012f;
+    [SerializeField] private float woodHeal = 0.012f;
 
     public void Interact()
     {
